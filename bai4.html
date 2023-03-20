@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<cavas id="demo"></cavas>
+<script>
+  let Rectangle=function (x,y,width,height,color){
+    this.x=x;
+    this.y=y;
+    this.width=width;
+    this.height=height;
+    this.color=color;
+     this.getX=function (){
+       return this.x
+     }
+      this.gety=function (){
+       return this.y
+     }
+      this.getwidth=function (){
+       return this.width
+     }
+      this.getheight=function (){
+       return this.height
+     }
+      this.getcolor=function (){
+       return this.color
+     }
+
+  }
+  let rectangle=new Rectangle(10,10,200,100,`#000000`);
+  let x= rectangle.getX()
+  let y= rectangle.gety()
+  let width= rectangle.getwidth()
+  let height= rectangle.getheight()
+  let color= rectangle.getcolor()
+  let canvas=document.getElementById("demo");
+  let ctx=canvas.getContext('2d')
+  ctx.fillStyle=color
+  ctx.fillRect(x,y,width,height);
+</script>
+
+</body>
+</html>
